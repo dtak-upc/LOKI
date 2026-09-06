@@ -77,9 +77,9 @@ Apportioned using the empirical direct prompt/completion distribution (45.66% pr
 
 Total inference costs are computed as:
 
-\[
+$$
 \text{Cost} = \frac{N_{\text{prompt}}}{10^6} \times C_{\text{input}} + \frac{N_{\text{completion}}}{10^6} \times C_{\text{output}}
-\]
+$$
 
 ### Full 382-Admission Benchmark
 
@@ -95,24 +95,24 @@ Total inference costs are computed as:
 ## 5. Detailed Cost Breakdown
 
 ### LOKI + GPT-OSS 20B
-\[
+$$
 (1.255720 \times \$0.200) + (1.494680 \times \$0.300) = \$0.251 + \$0.448 = \mathbf{\$0.70}
-\]
+$$
 
 ### LOKI + Qwen-3.6-35B
-\[
+$$
 (1.255720 \times \$0.248) + (1.494680 \times \$1.485) = \$0.311 + \$2.220 = \mathbf{\$2.53}
-\]
+$$
 
 ### Direct Qwen-3.6-35B
-\[
+$$
 (3.850749 \times \$0.248) + (4.583536 \times \$1.485) = \$0.955 + \$6.807 = \mathbf{\$7.76}
-\]
+$$
 
 ### Direct Qwen-3.7-Max
-\[
+$$
 (3.957877 \times \$1.650) + (4.861330 \times \$4.951) = \$6.530 + \$24.068 = \mathbf{\$30.60}
-\]
+$$
 
 ---
 
@@ -122,13 +122,13 @@ Total inference costs are computed as:
 Compared to direct baselines, LOKI reduces LLM token volume substantially:
 
 - **vs. Direct Qwen-3.6:**
-  \[
+  $$
   1 - \frac{2,750,400}{8,434,285} = \mathbf{67.4\% \text{ reduction}}
-  \]
+  $$
 - **vs. Direct Qwen-3.7-Max:**
-  \[
+  $$
   1 - \frac{2,750,400}{8,819,207} = \mathbf{68.8\% \text{ reduction}}
-  \]
+  $$
 
 ### Cost Efficiency
 - **Direct Qwen-3.6 (\$7.76)** is **3.1× more expensive** than **LOKI + Qwen-3.6 (\$2.53)**, representing a 67.4% cost savings under identical per-token pricing.

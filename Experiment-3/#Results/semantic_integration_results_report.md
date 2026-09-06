@@ -14,9 +14,9 @@ The primary benchmark family evaluating how accurately each system discovers, re
 
 ### 1.2 Ground Truth (GT) Pair Recovery
 Measures end-to-end recall of reference entity pairs across the complete dataset:
-\[
+$$
 \text{GT Pair Recovery} = \frac{N_{\text{gt\_matched\_pairs}}}{N_{\text{gt\_pairs}}}
-\]
+$$
 
 ### 1.3 Cluster Quality Diagnostics
 Evaluates the partition structure of the discovered relationships:

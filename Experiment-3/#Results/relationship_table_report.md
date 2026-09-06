@@ -20,9 +20,9 @@ Each predicted cluster represents one materialized table corresponding to a dist
 - **FP:** Predicted typed pairs that do not match a reference pair of that type.
 - **FN:** Reference typed pairs not recovered by any oracle-assigned predicted typed pair.
 
-\[
+$$
 \text{Precision} = \frac{\text{TP}}{\text{Pred pairs}}, \quad \text{Recall} = \frac{\text{TP}}{\text{GT pairs}}, \quad \text{F1} = \frac{2\text{TP}}{\text{Pred pairs} + \text{GT pairs}}
-\]
+$$
 
 ### 2. Typed Table Materialization Metrics
 - **Pred tables:** Total predicted typed table objects.
@@ -31,9 +31,9 @@ Each predicted cluster represents one materialized table corresponding to a dist
 - **FP:** Predicted tables whose assigned relationship type does not match any reference table of that type.
 - **FN:** Reference tables not matched by any predicted table of that type.
 
-\[
+$$
 \text{Precision} = \frac{\text{TP}}{\text{Pred tables}}, \quad \text{Recall} = \frac{\text{TP}}{\text{GT tables}}, \quad \text{F1} = \frac{2\text{TP}}{\text{Pred tables} + \text{GT tables}}
-\]
+$$
 
 ---
 
