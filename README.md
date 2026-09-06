@@ -72,6 +72,7 @@ Rather than producing unverified single-table dumps, LOKI discovers and material
 - **Pair Precision**: $97.95\%$ (GPT-OSS 20B) / $98.00\%$ (Qwen-3.6).
 - **Physical Table Micro Precision**: $84.0\%$ / $84.8\%$.
 - **Cluster Structural Purity**: $\ge 99.5\%$ with Adjusted Rand Index (ARI) of $0.806$–$0.858$.
+- **Inference Efficiency**: $67.4\%$–$68.8\%$ reduction in token consumption compared to monolithic frontier LLMs (\$0.70 total cost for GPT-OSS 20B vs. \$30.60 for Qwen-3.7-Max).
 
 ---
 
@@ -106,6 +107,7 @@ Published evaluation models and assets are available on Hugging Face:
 - Automated download scripts are provided within each experiment directory:
   - Experiment 1: `python Experiment-1/Post_Training_Evals/model_download.py`
   - Experiment 2: `python Experiment-2/SOTA_Evaluation_New/download_models.py`
+  - Experiment 3: Pre-materialized predictions and clinical annotations are bundled under `Experiment-3/LLM_Eval_Ex-3/`.
 
 ---
 
@@ -122,11 +124,15 @@ Evaluates discovery accuracy on the Pharma Protocol benchmark against state-of-t
 - Primary script: `Experiment-2/SOTA_Evaluation_New/run_comparison_pharma.py`
 - Scalability driver: `Experiment-2/SOTA_Evaluation_New/run_scalability_pharma.py`
 
-### Experiment 3: End-to-End Data Integration Vs. Frontier LLM Baselines
-Evaluates full relationship-type table materialization across 382 hospital admissions from MIMIC-IV. Compares LOKI against direct prompting on frontier LLMs (Qwen-3.7-Max, Qwen-3.6-Local, GPT-OSS 20B) across table materialization metrics, cluster purity, and token economics.
+### Experiment 3: End-to-End Data Integration vs. Frontier LLM Baselines
+Evaluates full relationship-type table materialization across 382 hospital admissions from MIMIC-IV. Compares LOKI against direct prompting on frontier LLMs (Qwen-3.7-Max, Qwen-3.6-Local, GPT-OSS 20B) across physical table materialization, entity-pair resolution, cluster purity, and token economics.
 - Guide: [`Experiment-3/README.md`](Experiment-3/README.md)
-- Primary report: [`Experiment-3/#Results/relationship_table_report.md`](Experiment-3/#Results/relationship_table_report.md)
+- Primary evaluation script: `Experiment-3/LLM_Eval_Ex-3/compare_type_bucket_clusters.py`
+- Primary table report: [`Experiment-3/#Results/relationship_table_report.md`](Experiment-3/#Results/relationship_table_report.md)
+- Supplementary diagnostics report: [`Experiment-3/#Results/semantic_integration_results_report.md`](Experiment-3/#Results/semantic_integration_results_report.md)
+- Matched-support robustness analysis: [`Experiment-3/#Results/relationship_clustering_fairness_report.md`](Experiment-3/#Results/relationship_clustering_fairness_report.md)
 - Compute cost methodology: [`Experiment-3/#Results/Compute_Cost/README.md`](Experiment-3/#Results/Compute_Cost/README.md)
+- Materialization pipeline trace (optional): `LOKI/materialize_joins.py`
 
 <!-- ---
 
