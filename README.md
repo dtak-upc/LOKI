@@ -71,8 +71,8 @@ Training uses a five-term objective designed to enforce alignment while preventi
 Rather than producing unverified single-table dumps, LOKI discovers and materializes fine-grained relation tables corresponding to distinct cross-table relationship types. On 382 MIMIC-IV admissions:
 - **Pair Precision**: $97.95\%$ (GPT-OSS 20B) / $98.00\%$ (Qwen-3.6).
 - **Physical Table Micro Precision**: $84.0\%$ / $84.8\%$.
-- **Cluster Structural Purity**: $\ge 99.5\%$ with Adjusted Rand Index (ARI) of $0.806$–$0.858$.
-- **Inference Efficiency**: $67.4\%$–$68.8\%$ reduction in token consumption compared to monolithic frontier LLMs (\$0.70 total cost for GPT-OSS 20B vs. \$30.60 for Qwen-3.7-Max).
+- **Cluster Structural Purity**: $\ge 99.5\%$ with Adjusted Rand Index (ARI) of $0.806–0.858$.
+- **Inference Efficiency**: 67.4\%–68.8\% reduction in token consumption compared to monolithic frontier LLMs (\$0.70 total cost for GPT-OSS 20B vs. \$30.60 for Qwen-3.7-Max).
 
 ---
 
