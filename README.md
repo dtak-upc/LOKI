@@ -128,10 +128,10 @@ Evaluates discovery accuracy on the Pharma Protocol benchmark against state-of-t
 Evaluates full relationship-type table materialization across 382 hospital admissions from MIMIC-IV. Compares LOKI against direct prompting on frontier LLMs (Qwen-3.7-Max, Qwen-3.6-Local, GPT-OSS 20B) across physical table materialization, entity-pair resolution, cluster purity, and token economics.
 - Guide: [`Experiment-3/README.md`](Experiment-3/README.md)
 - Primary evaluation script: `Experiment-3/LLM_Eval_Ex-3/compare_type_bucket_clusters.py`
-- Primary table report: [`Experiment-3/#Results/relationship_table_report.md`](Experiment-3/#Results/relationship_table_report.md)
-- Supplementary diagnostics report: [`Experiment-3/#Results/semantic_integration_results_report.md`](Experiment-3/#Results/semantic_integration_results_report.md)
-- Matched-support robustness analysis: [`Experiment-3/#Results/relationship_clustering_fairness_report.md`](Experiment-3/#Results/relationship_clustering_fairness_report.md)
-- Compute cost methodology: [`Experiment-3/#Results/Compute_Cost/README.md`](Experiment-3/#Results/Compute_Cost/README.md)
+- Primary table report: [`Experiment-3/#Results/relationship_table_report.md`](Experiment-3/%23Results/relationship_table_report.md)
+- Supplementary diagnostics report: [`Experiment-3/#Results/semantic_integration_results_report.md`](Experiment-3/%23Results/semantic_integration_results_report.md)
+- Matched-support robustness analysis: [`Experiment-3/#Results/relationship_clustering_fairness_report.md`](EExperiment-3/%23Results/relationship_clustering_fairness_report.md)
+- Compute cost methodology: [`Experiment-3/LLM_Eval_Ex-3/Pred/LOKI/Compute_Cost/README.md`](Experiment-3/LLM_Eval_Ex-3/Pred/LOKI/Compute_Cost/README.md)
 - Materialization pipeline trace (optional): `LOKI/materialize_joins.py`
 
 <!-- ---
